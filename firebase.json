@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "new-horizons-guide",
+      "public": "dist/new-horizons-guide",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "new-horizons-collect-guide": {
+      "hosting": {
+        "new-horizons-guide": [
+          "new-horizons-collect-guide"
+        ]
+      }
+    }
+  }
+}
