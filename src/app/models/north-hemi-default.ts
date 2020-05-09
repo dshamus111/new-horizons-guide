@@ -7,7 +7,7 @@ import { Bug } from './Bug.model';
 
 export const fish: Fish[] = [
     {
-      name: 'Example fixh',
+      name: 'Example fish',
       picture: 'path/to/image/leave placeholder for now',
       available_month: [MONTH.January, MONTH.February, MONTH.March],
       caught: false,
