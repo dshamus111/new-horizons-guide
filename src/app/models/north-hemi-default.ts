@@ -1507,7 +1507,8 @@ export const fish: Fish[] = [
       time_end: {
         hours: 24,
         minutes: 0
-      }
+      },
+      notes: 'Only available when raining.'
     },
 
 ];
