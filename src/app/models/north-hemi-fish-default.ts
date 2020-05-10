@@ -1,12 +1,10 @@
-import { MONTH } from './Collectable.model';
-import { SHADOW, Fish, FISH_LOCATION } from './Fish.model';
-import { Bug } from './Bug.model';
-import { on } from 'cluster';
+import { MONTH } from './Animal.model';
+import { SHADOW, Fish, FISH_LOCATION } from './Animal.model';
 
 // List all north hemisphere fishes
 // Use 24 hour notation for Time
 
-export const fish: Fish[] = [
+export const northFish: Fish[] = [
     // {
     //   name: '',
     //   picture: '../../assets/img/fish/',
@@ -18,11 +16,11 @@ export const fish: Fish[] = [
     //   location: FISH_LOCATION.,
     //   time_start: {
     //     hours: ,
-    //     minutes: 
+    //     minutes:
     //   },
     //   time_end: {
     //     hours: ,
-    //     minutes: 
+    //     minutes:
     //   }
     // },
     {
@@ -55,7 +53,7 @@ export const fish: Fish[] = [
       location: FISH_LOCATION.River,
       time_start: {
         hours: 9,
-        minutes: 0 
+        minutes: 0
       },
       time_end: {
         hours: 16,
@@ -74,7 +72,7 @@ export const fish: Fish[] = [
       location: FISH_LOCATION.River,
       time_start: {
         hours: 0,
-        minutes: 0 
+        minutes: 0
       },
       time_end: {
         hours: 24,
@@ -97,7 +95,7 @@ export const fish: Fish[] = [
       },
       time_end: {
         hours: 9,
-        minutes: 0 
+        minutes: 0
       }
     },
     {
@@ -605,7 +603,7 @@ export const fish: Fish[] = [
       location: FISH_LOCATION.River_Mouth,
       time_start: {
         hours: 0,
-        minutes: 0 
+        minutes: 0
       },
       time_end: {
         hours: 24,
@@ -715,7 +713,7 @@ export const fish: Fish[] = [
       location: FISH_LOCATION.River,
       time_start: {
         hours: 9,
-        minutes:0 
+        minutes: 0
       },
       time_end: {
         hours: 16,
@@ -1493,8 +1491,8 @@ export const fish: Fish[] = [
     {
       name: 'Coelacanth',
       picture: '../../assets/img/fish/coelacanth.png',
-      available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.July, MONTH.August,
-        MONTH.September, MONTH.November, MONTH.December],
+      available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August,
+        MONTH.September, MONTH.October, MONTH.November, MONTH.December],
       caught: false,
       in_museum: false,
       price: 15000,
@@ -1508,11 +1506,7 @@ export const fish: Fish[] = [
         hours: 24,
         minutes: 0
       },
-      notes: 'Only available when raining.'
+      notes: 'Raining'
     },
-
-];
-
-export const bugs: Bug[] = [
 
 ];
