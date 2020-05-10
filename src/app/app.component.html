@@ -5,11 +5,11 @@
   <mat-tab-group mat-stretch-tabs headerPosition="below" class="list">
 
     <mat-tab label="Fish">
-        <app-fish-item *ngFor="let fish of fishList | available_date" [fish]="fish"></app-fish-item>
+      <app-fish-item *ngFor="let fish of fishList | available_date" [fish]="fish"></app-fish-item>
     </mat-tab>
 
     <mat-tab label="Bugs">
-
+      <div style="height: 100%; display: flex; align-items: center; justify-content: center"><p>Coming Soon</p></div>
     </mat-tab>
 
   </mat-tab-group>

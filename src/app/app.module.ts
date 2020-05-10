@@ -31,4 +31,4 @@ import { DatePipe } from './pipes/date.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }

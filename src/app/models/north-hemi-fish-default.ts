@@ -1472,8 +1472,8 @@ export const northFish: Fish[] = [
     {
       name: 'BarrelEye',
       picture: '../../assets/img/fish/barreleye.png',
-      available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.July, MONTH.August,
-        MONTH.September, MONTH.November, MONTH.December],
+      available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August,
+        MONTH.September, MONTH.October, MONTH.November, MONTH.December],
       caught: false,
       in_museum: false,
       price: 15000,
