@@ -45,6 +45,22 @@ export enum FISH_LOCATION {
   Pier = 'Pier'
 }
 
+export enum BUG_LOCATION {
+  Flying = 'Flying',
+  Rocks = 'Rocks',
+  Beach = 'Beach',
+  Beach_Rocks = 'Rocks on Beach',
+  Flowers = 'On Flowers',
+  Ponds_or_River = 'On Pond or River',
+  Rocks_or_Bushes = 'On Rocks or Bushes',
+  Ground = 'On the Ground',
+  Rot_Food = 'On Rotting Food',
+  Stumps = 'On Stumps',
+  Trees = 'On Trees',
+  Underground = 'Underground',
+  Villager = 'On Villagers Heads'
+}
+
 export interface Fish extends Animal {
   shadow: SHADOW;
   location: FISH_LOCATION;
@@ -52,5 +68,5 @@ export interface Fish extends Animal {
 }
 
 export interface Bug extends Animal {
-  location: any;
+  location: BUG_LOCATION;
 }
