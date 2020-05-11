@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -21,6 +21,17 @@ import { DatePipe } from './pipes/date.pipe';
 import { DetailsDialogComponent } from './components/details-dialog/details-dialog.component';
 import { BugItemComponent } from './components/bug-item/bug-item.component';
 
+declare var Hammer: any;
+
+export class MyHammerConfig extends HammerGestureConfig  {
+  buildHammer(element: HTMLElement) {
+    const mc = new Hammer(element, {
+      touchAction: 'pan-y'
+    });
+    return mc;
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +53,13 @@ import { BugItemComponent } from './components/bug-item/bug-item.component';
     MatIconModule,
     MatMenuModule,
   ],
-  providers: [],
+  providers: [
+    {
+      // hammer instantion with custom config
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig ,
+    },
+  ],
   bootstrap: [AppComponent],
   entryComponents: [DetailsDialogComponent]
 })
