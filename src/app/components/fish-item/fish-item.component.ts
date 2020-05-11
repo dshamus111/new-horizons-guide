@@ -22,7 +22,8 @@ export class FishItemComponent implements OnInit {
 
   openDialog(data: any) {
     const dialogRef = this.dialog.open(DetailsDialogComponent, {
-      data
+      data,
+      panelClass: 'fish-dialog'
     });
   }
 

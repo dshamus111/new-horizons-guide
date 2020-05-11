@@ -1,10 +1,10 @@
 <div class="main-container">
 
-  <header class="header-bar">
+  <header class="header-bar" [ngStyle]="{'background-color': displayTheme()}">
     <button mat-icon-button [mat-menu-trigger-for]="settingsMenu" class="settings"><mat-icon>settings</mat-icon></button>
   </header>
 
-  <mat-tab-group mat-stretch-tabs headerPosition="below" class="list">
+  <mat-tab-group mat-stretch-tabs headerPosition="below" class="list" (selectedTabChange)="toggleTheme($event)">
 
     <mat-tab label="Fish">
       <app-fish-item *ngFor="let fish of fishList | available_date: filter" [fish]="fish"></app-fish-item>
@@ -16,7 +16,7 @@
 
   </mat-tab-group>
 
-  <footer></footer>
+  <footer [ngStyle]="{'background-color': displayTheme()}"></footer>
 </div>
 
 <mat-menu #settingsMenu="matMenu">

@@ -18,12 +18,14 @@ export class AppComponent implements OnInit {
   fishList: Fish[];
   bugList: Bug[];
 
+  selectedTab: number;
   filter: boolean;
 
   constructor() {}
 
   ngOnInit() {
     this.filter = true;
+    this.selectedTab = 0;
 
     if (this.hemisphere === 'North Hemisphere') {
       this.fishList = northFish;
@@ -37,6 +39,19 @@ export class AppComponent implements OnInit {
 
   toggleFilter() {
     this.filter = !this.filter;
+  }
+
+  toggleTheme(event) {
+    this.selectedTab = event.index;
+  }
+
+  displayTheme() {
+    switch(this.selectedTab) {
+      case(0):
+        return 'lightskyblue';
+      case(1):
+        return 'lightgreen';
+    }
   }
 
 }

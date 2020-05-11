@@ -19,7 +19,8 @@ export class BugItemComponent implements OnInit {
 
   openDialog(data: any) {
     const dialogRef = this.dialog.open(DetailsDialogComponent, {
-      data
+      data,
+      panelClass: 'bug-dialog'
     });
   }
 }
