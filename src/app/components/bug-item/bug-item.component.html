@@ -1,6 +1,18 @@
-<div class="container">
-  <div class="picture"><img src="{{bug.picture}}"></div>
-  <div class="name"><p>{{bug.name}}</p></div>
-  <div class="location"><p>{{bug.location}} <br> {{bug.preview_notes ? '(' + bug.preview_notes + ')' : ''}}</p></div>
-  <div class="price"><img src="../../../assets/img/BellCoin.png" height="15" width="15" style="margin-right: 5px"><p>{{bug.price}}</p></div>
-</div>
+<mat-drawer-container>
+  <mat-drawer-content class="container" (swipeleft)="options.open()" (swiperight)="options.close()" (click)="openDialog(bug)">
+    <div class="picture"><img src="{{bug.picture}}"></div>
+    <div class="name"><p>{{bug.name}}</p></div>
+    <div class="location"><p>{{bug.location}} <br> {{bug.preview_notes ? '(' + bug.preview_notes + ')' : ''}}</p></div>
+    <div class="price"><img src="../../../assets/img/BellCoin.png" height="15" width="15" style="margin-right: 5px"><p>{{bug.price}}</p></div>
+  </mat-drawer-content>
+
+  <mat-drawer #options mode="push" class="drawer" position="end" mode="side">
+    <div class="drawer-container">
+      <button mat-icon-button><mat-icon>home</mat-icon></button>
+      <button mat-icon-button><mat-icon>settings</mat-icon></button>
+    </div>
+  </mat-drawer>
+
+</mat-drawer-container>
+
+

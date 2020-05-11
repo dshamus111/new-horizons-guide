@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .picture, .location, .price {
@@ -16,6 +16,13 @@
 }
 
 .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer-container {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

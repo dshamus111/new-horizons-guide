@@ -14,23 +14,29 @@ import { Collectable } from './models/Collectable.model';
 })
 export class AppComponent implements OnInit {
 
-  hemisphere = 'north'; // placeholder
+  hemisphere = 'North Hemisphere'; // placeholder
   fishList: Fish[];
   bugList: Bug[];
 
-  constructor(public dialog: MatDialog) {}
+  filter: boolean;
+
+  constructor() {}
 
   ngOnInit() {
+    this.filter = true;
 
-    if (this.hemisphere === 'north') {
+    if (this.hemisphere === 'North Hemisphere') {
       this.fishList = northFish;
       this.bugList = northBugs;
     }
   }
 
-  openDialog(data: any) {
-    const dialogRef = this.dialog.open(DetailsDialogComponent, {
-      data
-    });
+  toggleHemisphere() {
+
   }
+
+  toggleFilter() {
+    this.filter = !this.filter;
+  }
+
 }

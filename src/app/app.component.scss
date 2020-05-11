@@ -6,16 +6,23 @@
 }
 
 header {
-  flex: 0 0 5%;
+  flex: 1;
   background-color: skyblue;
+  text-align: end;
+  padding: 10px;
+
+  .settings {
+    color: white;
+  }
 }
 
 .list {
-  flex: 0 0 90%;
+  flex: 20;
   overflow: scroll;
 }
 
 footer {
-  flex: 0 0 5%;
+  flex: 1;
   background-color: skyblue;
+  padding: 10px;
 }

@@ -1,18 +1,27 @@
 <div class="main-container">
 
-  <header class="header-bar"></header>
+  <header class="header-bar">
+    <button mat-icon-button [mat-menu-trigger-for]="settingsMenu" class="settings"><mat-icon>settings</mat-icon></button>
+  </header>
 
   <mat-tab-group mat-stretch-tabs headerPosition="below" class="list">
 
     <mat-tab label="Fish">
-      <app-fish-item *ngFor="let fish of fishList | available_date" [fish]="fish" (click)="openDialog(fish)"></app-fish-item>
+      <app-fish-item *ngFor="let fish of fishList | available_date: filter" [fish]="fish"></app-fish-item>
     </mat-tab>
 
     <mat-tab label="Bugs">
-      <app-bug-item *ngFor="let bug of bugList | available_date" [bug]="bug" (click)="openDialog(bug)"></app-bug-item>
+      <app-bug-item *ngFor="let bug of bugList | available_date: filter" [bug]="bug"></app-bug-item>
     </mat-tab>
 
   </mat-tab-group>
 
   <footer></footer>
 </div>
+
+<mat-menu #settingsMenu="matMenu">
+  <div (click)="$event.stopPropagation()">
+    <button mat-menu-item>{{hemisphere}}</button>
+    <button mat-menu-item (click)="toggleFilter()">Display: {{filter === true ? 'Now' : 'All'}}</button>
+  </div>
+</mat-menu>

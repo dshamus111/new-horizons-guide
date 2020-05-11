@@ -11,7 +11,9 @@ import {
   MatTabsModule,
   MatDialogModule,
   MatButtonModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatIconModule,
+  MatMenuModule
 } from '@angular/material';
 
 import { FishItemComponent } from './components/fish-item/fish-item.component';
@@ -36,7 +38,9 @@ import { BugItemComponent } from './components/bug-item/bug-item.component';
     MatTabsModule,
     MatDialogModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -6,8 +6,12 @@ import { Animal } from '../models/Animal.model';
 @Pipe({name: 'available_date'})
 export class DatePipe implements PipeTransform {
 
-  transform(value: Animal[]): any {
+  transform(value: Animal[], enable: boolean): any {
     const now = new Date();
+
+    if (enable === false) {
+      return value;
+    }
 
     return value.filter((element) => {
 
