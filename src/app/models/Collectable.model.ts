@@ -5,5 +5,6 @@ export interface Collectable {
   caught: boolean;
   in_museum: boolean;
   price: number;
+  preview_notes?: string;
   notes?: string;
 }

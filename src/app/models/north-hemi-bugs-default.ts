@@ -57,7 +57,7 @@ export const northBugs: Bug[] = [
     },
     {
         name: 'Common Bluebottle',
-        picture: '../../assets/img/bugs/ommonbluebottle.png',
+        picture: '../../assets/img/bugs/commonbluebottle.png',
         available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August, MONTH.September],
         caught: false,
         in_museum: false,

@@ -1506,7 +1506,8 @@ export const northFish: Fish[] = [
         hours: 24,
         minutes: 0
       },
-      notes: 'Raining'
+      preview_notes: 'Raining',
+      notes: 'Only available when raining.'
     },
 
 ];

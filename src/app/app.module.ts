@@ -8,17 +8,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material Modules
 import {
-  MatTabsModule
-} from '@angular/material/tabs';
+  MatTabsModule,
+  MatDialogModule,
+  MatButtonModule,
+  MatSidenavModule
+} from '@angular/material';
 
 import { FishItemComponent } from './components/fish-item/fish-item.component';
 import { DatePipe } from './pipes/date.pipe';
+import { DetailsDialogComponent } from './components/details-dialog/details-dialog.component';
+import { BugItemComponent } from './components/bug-item/bug-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FishItemComponent,
-    DatePipe
+    DatePipe,
+    DetailsDialogComponent,
+    BugItemComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +33,13 @@ import { DatePipe } from './pipes/date.pipe';
     BrowserAnimationsModule,
 
     // Material Modules
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatSidenavModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DetailsDialogComponent]
 })
 export class AppModule {  }

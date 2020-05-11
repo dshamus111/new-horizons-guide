@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.picture, .location, .price {
+  flex: 1;
+  text-align: center;
+}
+
+.name {
+  flex: 2;
+  text-align: center;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

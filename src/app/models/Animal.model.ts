@@ -50,15 +50,15 @@ export enum BUG_LOCATION {
   Rocks = 'Rocks',
   Beach = 'Beach',
   Beach_Rocks = 'Rocks on Beach',
-  Flowers = 'On Flowers',
-  Ponds_or_River = 'On Pond or River',
-  Rocks_or_Bushes = 'On Rocks or Bushes',
-  Ground = 'On the Ground',
-  Rot_Food = 'On Rotting Food',
-  Stumps = 'On Stumps',
-  Trees = 'On Trees',
+  Flowers = 'Flowers',
+  Ponds_or_River = 'Pond or River',
+  Rocks_or_Bushes = 'Rocks or Bushes',
+  Ground = 'Ground',
+  Rot_Food = 'Rotting Food',
+  Stumps = 'Stumps',
+  Trees = 'Trees',
   Underground = 'Underground',
-  Villager = 'On Villagers Heads'
+  Villager = 'Villager Heads'
 }
 
 export interface Fish extends Animal {
