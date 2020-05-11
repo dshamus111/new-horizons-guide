@@ -27,3 +27,20 @@
   align-items: center;
   justify-content: center;
 }
+
+.caught, .museum {
+  flex: 1;
+  width: 10px;
+  padding: 0px;
+  width: 50%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.caught {
+  background-color: lightblue;
+}
+
+.museum {
+  background-color: cyan;
+}
