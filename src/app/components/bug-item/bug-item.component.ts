@@ -28,12 +28,12 @@ export class BugItemComponent implements OnInit {
   toggleCaught() {
     this.bug.caught = !this.bug.caught;
 
-    this.db.update('Bug', this.bug);
+    this.db.update('Bugs', this.bug);
   }
 
   toggleMuseum() {
     this.bug.in_museum = !this.bug.in_museum;
 
-    this.db.update('Bug', this.bug);
+    this.db.update('Bugs', this.bug);
   }
 }

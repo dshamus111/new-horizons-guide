@@ -1,5 +1,5 @@
 <mat-drawer-container>
-  <mat-drawer-content class="container" (swipeleft)="options.open()" (swiperight)="options.close()" (click)="openDialog(bug)">
+  <mat-drawer-content class="container" (click)="options.toggle()">
     <div class="picture">
       <img src="{{bug.picture}}">
       <div class="badges">
@@ -14,8 +14,9 @@
 
   <mat-drawer #options mode="push" position="end" mode="side">
     <div class="drawer-container">
-      <button mat-button class="caught" (click)="toggleCaught()"><mat-icon>check</mat-icon></button>
-      <button mat-button class="museum" (click)="toggleMuseum()"><mat-icon>museum</mat-icon></button>
+      <button mat-icon-button class="caught" (click)="toggleCaught()"><mat-icon>check</mat-icon></button>
+      <button mat-icon-button class="museum" (click)="toggleMuseum()"><mat-icon>museum</mat-icon></button>
+      <button mat-icon-button class="details" (click)="openDialog(bug)"><mat-icon>info</mat-icon></button>
     </div>
   </mat-drawer>
 

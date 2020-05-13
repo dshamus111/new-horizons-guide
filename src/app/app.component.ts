@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
   }
 
   displayTheme() {
-    switch(this.selectedTab) {
+    switch (this.selectedTab) {
       case(0):
         return 'lightskyblue';
       case(1):

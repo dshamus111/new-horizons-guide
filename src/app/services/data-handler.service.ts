@@ -14,7 +14,6 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class DataHandlerService {
 
-  private _dataChange: Subject<Collectable> = new Subject<Collectable>();
   private db;
 
   fishList: Fish[];
