@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
-import {northFish} from './models/north-hemi-fish-default';
+import { northFish } from './models/north-hemi-fish-default';
 import { northBugs } from './models/north-hemi-bugs-default';
 import { Fish, Bug } from './models/Animal.model';
-import { MatDialog } from '@angular/material';
-import { DetailsDialogComponent } from './components/details-dialog/details-dialog.component';
 import { Collectable } from './models/Collectable.model';
+import { SwUpdate } from '@angular/service-worker';
+import { DataHandlerService } from './services/data-handler.service';
 
 @Component({
   selector: 'app-root',
@@ -21,16 +21,35 @@ export class AppComponent implements OnInit {
   selectedTab: number;
   filter: boolean;
 
-  constructor() {}
+  update = false;
+
+  constructor(private updates: SwUpdate, private db: DataHandlerService) {
+    if (!this.updates.isEnabled) {
+      console.log('Updates are NOT enabled');
+    }
+    updates.available.subscribe(event => {
+      console.log('current', event.current, 'avalable', event.available);
+      this.update = true;
+    });
+  }
 
   ngOnInit() {
     this.filter = true;
     this.selectedTab = 0;
 
-    if (this.hemisphere === 'North Hemisphere') {
-      this.fishList = northFish;
-      this.bugList = northBugs;
-    }
+    this.db.initializeDB('north')
+    .then(_ => {
+      this.db.getAll('Fish')
+      .then(list => {
+        this.fishList = list;
+      });
+
+      this.db.getAll('Bugs')
+        .then(list => {
+          this.bugList = list;
+        });
+    });
+
   }
 
   toggleHemisphere() {
@@ -51,7 +70,15 @@ export class AppComponent implements OnInit {
         return 'lightskyblue';
       case(1):
         return 'lightgreen';
+      case(2):
+        return 'tan';
+      case(3):
+        return 'lightcoral';
     }
+  }
+
+  updateApplication() {
+    this.updates.activateUpdate().then(() => location.reload());
   }
 
 }

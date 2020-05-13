@@ -9,7 +9,7 @@ export class DatePipe implements PipeTransform {
   transform(value: Animal[], enable: boolean): any {
     const now = new Date();
 
-    if (enable === false) {
+    if (enable === false || !value) {
       return value;
     }
 

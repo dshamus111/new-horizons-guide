@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Fish } from '../../models/Animal.model';
 import { MatDialog } from '@angular/material';
 import { DetailsDialogComponent } from '../details-dialog/details-dialog.component';
+import { DataHandlerService } from 'src/app/services/data-handler.service';
 
 @Component({
   selector: 'app-fish-item',
@@ -12,7 +13,7 @@ export class FishItemComponent implements OnInit {
 
   @Input() fish: Fish;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private db: DataHandlerService) { }
 
   ngOnInit() {}
 
@@ -25,6 +26,18 @@ export class FishItemComponent implements OnInit {
       data,
       panelClass: 'fish-dialog'
     });
+  }
+
+  toggleCaught() {
+    this.fish.caught = !this.fish.caught;
+
+    this.db.update('Fish', this.fish);
+  }
+
+  toggleMuseum() {
+    this.fish.in_museum = !this.fish.in_museum;
+
+    this.db.update('Fish', this.fish);
   }
 
 }

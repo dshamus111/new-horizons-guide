@@ -1,6 +1,12 @@
 <mat-drawer-container>
   <mat-drawer-content class="container" (swipeleft)="options.open()" (swiperight)="options.close()" (click)="openDialog(fish)">
-    <div class="picture"><img src="{{fish.picture}}"></div>
+    <div class="picture">
+      <img src="{{fish.picture}}">
+      <div class="badges">
+        <div class="badge badge-caught" [ngStyle]="{'visibility': fish.caught ? 'visible' : 'hidden'}">&nbsp;</div>
+        <div class="badge badge-museum" [ngStyle]="{'visibility': fish.in_museum ? 'visible' : 'hidden'}">&nbsp;</div>
+      </div>
+    </div>
     <div class="name"><p>{{fish.name}}</p></div>
     <div *ngIf="options.opened === false" class="location"><p>{{fish.location}} <br> {{fish.preview_notes ? '(' + fish.preview_notes + ')' : ''}}</p></div>
     <div class="price"><img src="../../../assets/img/BellCoin.png" height="15" width="15" style="margin-right: 5px"><p>{{fish.price}}</p></div>
@@ -8,8 +14,8 @@
 
   <mat-drawer #options mode="push" class="drawer" position="end" mode="side">
     <div class="drawer-container">
-      <button mat-button class="caught"><mat-icon>check</mat-icon></button>
-      <button mat-button class="museum"><mat-icon>museum</mat-icon></button>
+      <button mat-button class="caught" (click)="toggleCaught()"><mat-icon>check</mat-icon></button>
+      <button mat-button class="museum" (click)="toggleMuseum()"><mat-icon>museum</mat-icon></button>
     </div>
   </mat-drawer>
 </mat-drawer-container>

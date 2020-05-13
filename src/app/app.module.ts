@@ -20,6 +20,8 @@ import { FishItemComponent } from './components/fish-item/fish-item.component';
 import { DatePipe } from './pipes/date.pipe';
 import { DetailsDialogComponent } from './components/details-dialog/details-dialog.component';
 import { BugItemComponent } from './components/bug-item/bug-item.component';
+import { FossilItemComponent } from './components/fossil-item/fossil-item.component';
+import { ArtItemComponent } from './components/art-item/art-item.component';
 
 declare var Hammer: any;
 
@@ -38,7 +40,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     FishItemComponent,
     DatePipe,
     DetailsDialogComponent,
-    BugItemComponent
+    BugItemComponent,
+    FossilItemComponent,
+    ArtItemComponent
   ],
   imports: [
     BrowserModule,

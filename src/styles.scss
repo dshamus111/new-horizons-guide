@@ -6,3 +6,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-tab-body-wrapper{
   flex-grow: 1;
 }
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.badge {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.badge-caught {
+  background-color: blue;
+}
+
+.badge-museum {
+  background-color: green;
+}
