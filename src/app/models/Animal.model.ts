@@ -58,7 +58,8 @@ export enum BUG_LOCATION {
   Stumps = 'Stumps',
   Trees = 'Trees',
   Underground = 'Underground',
-  Villager = 'Villager Heads'
+  Villager = 'Villager Heads',
+  Trash = 'Trash'
 }
 
 export interface Fish extends Animal {
