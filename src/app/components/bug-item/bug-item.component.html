@@ -4,7 +4,7 @@
       <img src="{{bug.picture}}">
       <div class="badges">
         <div class="badge badge-caught" [ngStyle]="{'visibility': bug.caught ? 'visible' : 'hidden'}">&nbsp;</div>
-        <div class="badge badge-museum" [ngStyle]="{'visibility': bug.caught ? 'visible' : 'hidden'}">&nbsp;</div>
+        <div class="badge badge-museum" [ngStyle]="{'visibility': bug.in_museum ? 'visible' : 'hidden'}">&nbsp;</div>
       </div>
     </div>
     <div class="name"><p>{{bug.name}}</p></div>
