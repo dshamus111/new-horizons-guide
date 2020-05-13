@@ -19,7 +19,7 @@ export class DatePipe implements PipeTransform {
         if (month === now.getMonth()) {
           const hour = now.getHours();
           const minutes = now.getMinutes();
-          if (hour > element.time_start.hours && hour < element.time_end.hours) {
+          if (hour > element.time_start.hours && hour < (element.time_end.hours % 25 + 1)) {
             return 1;
           }
         }

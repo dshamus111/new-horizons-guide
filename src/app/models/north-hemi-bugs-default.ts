@@ -16,7 +16,7 @@ export const northBugs: Bug[] = [
             minutes: 0
         },
         time_end: {
-            hours: 8,
+            hours: 32,
             minutes: 0
         },
         notes: 'Disguised as shells'
