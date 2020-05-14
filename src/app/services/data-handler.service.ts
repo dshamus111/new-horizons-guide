@@ -60,19 +60,33 @@ export class DataHandlerService {
 
     for (const element of this.fishList) {
       await this.db.get('Fish', element.name)
-        .then(row => {
-          if (row === undefined) {
-            this.db.put('Fish', element);
+        .then((row: Fish) => {
+          // if (row === undefined) {
+          //   this.db.put('Fish', element);
+          // } else {
+          //   element.caught = row.caught;
+          //   element.in_museum = row.in_museum;
+          //   this.db.put('Fish', element);
+          // }
+          if (row) {
+            element.caught = row.caught;
+            element.in_museum = row.in_museum;
           }
+          this.db.put('Fish', element);
         });
     }
 
     for (const element of this.bugList) {
       await this.db.get('Bugs', element.name)
         .then(row => {
-          if (row === undefined) {
-            this.db.put('Bugs', element);
+          // if (row === undefined) {
+          //   this.db.put('Bugs', element);
+          // }
+          if (row) {
+            element.caught = row.caught;
+            element.in_museum = row.in_museum;
           }
+          this.db.put('Bugs', element);
         });
     }
 

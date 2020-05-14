@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="container__top">
+    <h1>GIANT PICTURE</h1>
+    <h3>{{data.name}}</h3>
+    <div class="info-row">
+      <p>{{data.location}}</p>
+      <mat-divider [vertical]="true"></mat-divider>
+      <p>{{data.time_start.hours === 0 && data.time_end.hours === 24 ? 'All Day' : formatTime(data.time_start) + ' - ' + formatTime(data.time_end)}}</p>
+      <mat-divider [vertical]="true"></mat-divider>
+      <p><img src="../../../assets/img/BellCoin.png" height="10px" width="10px">{{data.price}}</p>
+    </div>
+  </div>
+
+  <div class="container__middle">
+    <div class="left-half">
+      <h2>Shadow</h2>
+      <div class="icons">
+        <p>Caught</p>
+        <p>Museum</p>
+      </div>
+    </div>
+    <div class="available">
+      <div class="available__grid">
+        <div [ngStyle]="{'background-color': isAvailable(0)}">Jan</div>
+        <div [ngStyle]="{'background-color': isAvailable(1)}">Feb</div>
+        <div [ngStyle]="{'background-color': isAvailable(2)}">Mar</div>
+        <div [ngStyle]="{'background-color': isAvailable(3)}">Apr</div>
+        <div [ngStyle]="{'background-color': isAvailable(4)}">May</div>
+        <div [ngStyle]="{'background-color': isAvailable(5)}">Jun</div>
+        <div [ngStyle]="{'background-color': isAvailable(6)}">Jul</div>
+        <div [ngStyle]="{'background-color': isAvailable(7)}">Aug</div>
+        <div [ngStyle]="{'background-color': isAvailable(8)}">Sep</div>
+        <div [ngStyle]="{'background-color': isAvailable(9)}">Oct</div>
+        <div [ngStyle]="{'background-color': isAvailable(10)}">Nov</div>
+        <div [ngStyle]="{'background-color': isAvailable(11)}">Dec</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__bottom">
+    <h2>Notes:</h2>
+    <p>{{data.notes}}</p>
+  </div>
+
+  <button mat-button (click)="close()">Close</button>
+
+</div>
