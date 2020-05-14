@@ -1041,7 +1041,7 @@ export const northBugs: Bug[] = [
     },
     {
         name: 'Atlas Moth',
-        picture: '../../assets/img/bugs/atlasmoh.png',
+        picture: '../../assets/img/bugs/atlasmoth.png',
         available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August, MONTH.September],
         caught: false,
         in_museum: false,
