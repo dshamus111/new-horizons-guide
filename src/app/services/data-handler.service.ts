@@ -19,6 +19,8 @@ export class DataHandlerService {
   fishList: Fish[];
   bugList: Bug[];
 
+  loadingText = new Subject<string>();
+
   constructor() {}
 
   async initializeDB(hemisphere: string) {
@@ -56,18 +58,11 @@ export class DataHandlerService {
       }
     });
 
-    // let cursor: IDBCursor = await this.db.transaction('Fish').store.openCursor();
+    this.loadingText.next('Loading Fish Data...');
 
     for (const element of this.fishList) {
       await this.db.get('Fish', element.name)
         .then((row: Fish) => {
-          // if (row === undefined) {
-          //   this.db.put('Fish', element);
-          // } else {
-          //   element.caught = row.caught;
-          //   element.in_museum = row.in_museum;
-          //   this.db.put('Fish', element);
-          // }
           if (row) {
             element.caught = row.caught;
             element.in_museum = row.in_museum;
@@ -76,12 +71,11 @@ export class DataHandlerService {
         });
     }
 
+    this.loadingText.next('Loading Bugs Data...');
+
     for (const element of this.bugList) {
       await this.db.get('Bugs', element.name)
         .then(row => {
-          // if (row === undefined) {
-          //   this.db.put('Bugs', element);
-          // }
           if (row) {
             element.caught = row.caught;
             element.in_museum = row.in_museum;
@@ -89,7 +83,6 @@ export class DataHandlerService {
           this.db.put('Bugs', element);
         });
     }
-
   }
 
   async update(store: string, data: any) {
