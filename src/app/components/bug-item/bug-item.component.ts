@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Bug } from 'src/app/models/Animal.model';
-import { DetailsDialogComponent } from '../details-dialog/details-dialog.component';
+import { AnimalDetailsComponent } from '../animal-details/animal-details.component';
 import { MatDialog } from '@angular/material';
 import { DataHandlerService } from 'src/app/services/data-handler.service';
 
@@ -18,8 +18,8 @@ export class BugItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  openDialog(data: any) {
-    const dialogRef = this.dialog.open(DetailsDialogComponent, {
+  openDialog(data: Bug) {
+    const dialogRef = this.dialog.open(AnimalDetailsComponent, {
       data,
       panelClass: 'bug-dialog'
     });

@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" *ngIf="(isLoading | async) === false else loading">
 
   <header class="header-bar" [ngStyle]="{'background-color': displayTheme()}">
     <button *ngIf="update === true" mat-icon-button (click)="updateApplication()" matTooltip="An update is available!"><mat-icon>system_update</mat-icon></button>
@@ -34,3 +34,9 @@
     <button mat-menu-item (click)="toggleFilter()">Display: {{filter === true ? 'Now' : 'All'}}</button>
   </div>
 </mat-menu>
+
+<ng-template #loading>
+  <div class="loading">
+    <p>{{loadingText}}</p>
+  </div>
+</ng-template>

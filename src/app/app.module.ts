@@ -13,12 +13,13 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatMenuModule
+  MatMenuModule,
+  MatDividerModule
 } from '@angular/material';
 
 import { FishItemComponent } from './components/fish-item/fish-item.component';
 import { DatePipe } from './pipes/date.pipe';
-import { DetailsDialogComponent } from './components/details-dialog/details-dialog.component';
+import { AnimalDetailsComponent } from './components/animal-details/animal-details.component';
 import { BugItemComponent } from './components/bug-item/bug-item.component';
 import { FossilItemComponent } from './components/fossil-item/fossil-item.component';
 import { ArtItemComponent } from './components/art-item/art-item.component';
@@ -39,7 +40,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AppComponent,
     FishItemComponent,
     DatePipe,
-    DetailsDialogComponent,
+    AnimalDetailsComponent,
     BugItemComponent,
     FossilItemComponent,
     ArtItemComponent
@@ -56,6 +57,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
+    MatDividerModule
   ],
   providers: [
     {
@@ -65,6 +67,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     },
   ],
   bootstrap: [AppComponent],
-  entryComponents: [DetailsDialogComponent]
+  entryComponents: [AnimalDetailsComponent]
 })
 export class AppModule {  }
