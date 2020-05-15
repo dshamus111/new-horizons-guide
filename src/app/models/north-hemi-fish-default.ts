@@ -196,7 +196,7 @@ export const northFish: Fish[] = [
     {
       name: 'Killifish',
       picture: '../../assets/img/fish/killifish.png',
-      available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August],
+      available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August, MONTH.September],
       caught: false,
       in_museum: false,
       price: 300,
@@ -508,7 +508,7 @@ export const northFish: Fish[] = [
       available_month: [MONTH.March, MONTH.April, MONTH.May, MONTH.June, MONTH.September, MONTH.October, MONTH.November],
       caught: false,
       in_museum: false,
-      price: 800,
+      price: 1000,
       shadow: SHADOW.Medium,
       location: FISH_LOCATION.River_Cliff,
       time_start: {
@@ -878,7 +878,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 0,
+        hours: 24,
         minutes: 0
       }
     },
@@ -896,7 +896,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 0,
+        hours: 24,
         minutes: 0
       }
     },
@@ -987,7 +987,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       }
     },
@@ -1020,7 +1020,7 @@ export const northFish: Fish[] = [
       shadow: SHADOW.Medium,
       location: FISH_LOCATION.Sea,
       time_start: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       },
       time_end: {
@@ -1061,7 +1061,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       }
     },
@@ -1144,7 +1144,7 @@ export const northFish: Fish[] = [
     {
       name: 'Dab',
       picture: '../../assets/img/fish/dab.png',
-      available_month: [MONTH.January, MONTH.February, MONTH.February, MONTH.March, MONTH.October,
+      available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.October,
       MONTH.November, MONTH.December],
       caught: false,
       in_museum: false,
@@ -1321,7 +1321,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       }
     },
@@ -1339,7 +1339,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       time_end: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       }
     },
@@ -1480,7 +1480,7 @@ export const northFish: Fish[] = [
       shadow: SHADOW.Small,
       location: FISH_LOCATION.Sea,
       time_start: {
-        hours: 23,
+        hours: 21,
         minutes: 0
       },
       time_end: {
