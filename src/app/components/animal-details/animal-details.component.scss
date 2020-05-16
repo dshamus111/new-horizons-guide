@@ -18,11 +18,14 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+
     }
 
     .info-row > * {
       margin: 0 10px;
+      
     }
+
   }
 
   &__middle {
@@ -84,4 +87,17 @@
   width: 50px;
   border-radius: 50%;
   border: thin solid black;
+}
+
+.picture-real {
+  overflow: hidden;
+  object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+}
+
+.blathers-notes {
+  font-style: italic;
 }

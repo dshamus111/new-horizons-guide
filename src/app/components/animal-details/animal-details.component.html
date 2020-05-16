@@ -1,6 +1,8 @@
 <div class="container">
   <div class="container__top">
-    <h1>GIANT PICTURE</h1>
+    <div class="picture-real" [ngStyle]="{'background-image': parseName()}">
+      <!-- <img  src="{{parseName()}}" height="100px" width="200px"> -->
+    </div>
     <h2>{{data.name}}</h2>
     <div class="info-row">
       <h3>{{data.location}}</h3>
@@ -40,6 +42,8 @@
   <div class="container__bottom">
     <h2>Notes:</h2>
     <h3>{{data.notes}}</h3>
+    <br>
+    <p class="blathers-notes">{{data.b_fact ? '\"' + data.b_fact + '\" - Blathers' : ''}}</p>
   </div>
 
   <button mat-button (click)="close()">Close</button>

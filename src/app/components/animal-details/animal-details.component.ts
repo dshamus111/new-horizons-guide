@@ -46,4 +46,12 @@ export class AnimalDetailsComponent implements OnInit {
   getShadow(): SHADOW {
     return (this.data as Fish).shadow;
   }
+
+  parseName(): string {
+    if (this.isFish()) {
+      return 'url(../../../assets/img/fish_real/' + this.data.name.toLowerCase().replace(' ', '') + '.png)';
+    } else {
+      return 'url(../../../assets/img/bugs_real/' + this.data.name.toLowerCase().replace(' ', '') + '.png)';
+    }
+  }
 }
