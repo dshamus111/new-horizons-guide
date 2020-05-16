@@ -35,12 +35,12 @@ export class AppComponent implements OnInit {
   // Seperate sort data for each tab
   tabSortData: SortData[] = [
     {
-      sortName: 'price',
+      sortName: 'name',
       sortOrder: 'asc'
     },
     {
       sortName: 'name',
-      sortOrder: 'desc'
+      sortOrder: 'asc'
     },
     {
       sortName: 'name',
