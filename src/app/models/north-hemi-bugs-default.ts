@@ -5,7 +5,7 @@ export const northBugs: Bug[] = [
     {
         name: 'Hermit Crab',
         picture: '../../assets/img/bugs/hermitcrab.png',
-        available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.May, MONTH.June,
+        available_month: [MONTH.January, MONTH.February, MONTH.March,MONTH.April, MONTH.May, MONTH.June,
         MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
         caught: false,
         in_museum: false,
@@ -19,7 +19,8 @@ export const northBugs: Bug[] = [
             hours: 8,
             minutes: 0
         },
-        notes: 'Disguised as shells'
+        preview_notes: 'Disguised as shells',
+        notes: 'The Hermit Crab is a master of disguise. It will be on the shoreline disguised as a shell. When approaching the Hermit Crab, it will spook and run away.'
     },
     {
         name: 'Yellow Butterfly',
@@ -58,7 +59,7 @@ export const northBugs: Bug[] = [
     {
         name: 'Common Bluebottle',
         picture: '../../assets/img/bugs/commonbluebottle.png',
-        available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August, MONTH.September],
+        available_month: [MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August],
         caught: false,
         in_museum: false,
         price: 300,
@@ -75,7 +76,7 @@ export const northBugs: Bug[] = [
     {
         name: 'Paper Kite Butterfly',
         picture: '../../assets/img/bugs/paperkitebutterfly.png',
-        available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.May, MONTH.June,
+        available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH. April, MONTH.May, MONTH.June,
             MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
         caught: false,
         in_museum: false,
@@ -364,7 +365,8 @@ export const northBugs: Bug[] = [
             hours: 19,
             minutes: 0
         },
-        notes: 'Near hybrid flowers'
+        preview_notes: 'Near hybrid flowers',
+        notes: 'The Peacock Butterfly can be found flying near hybrid flowers.'
     },
     {
         name: 'Moth',
@@ -383,7 +385,8 @@ export const northBugs: Bug[] = [
             hours: 4,
             minutes: 0
         },
-        notes: 'Near lights'
+        preview_notes: 'Near lights',
+        notes: 'The Moth can be found flying near lights that are on.'
     },
     {
         name: 'Pill Bug',
@@ -402,7 +405,8 @@ export const northBugs: Bug[] = [
             hours: 16,
             minutes: 0
         },
-        notes: 'Hit rocks'
+        preview_notes: 'Hit rocks',
+        notes: 'When hitting rocks, the Pill Bug can pop out and scurry away.'
     },
     {
         name: 'Centipede',
@@ -421,13 +425,14 @@ export const northBugs: Bug[] = [
             hours: 23,
             minutes: 0
         },
-        notes: 'Hit rocks'
+        preview_notes: 'Hit rocks',
+        notes: 'When hitting rocks, the Centipede can pop out and scurry away.'
     },
     {
         name: 'Wharf Roach',
         picture: '../../assets/img/bugs/wharfroach.png',
         available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.May, MONTH.June,
-            MONTH.June, MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
+        MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
         caught: false,
         in_museum: false,
         price: 200,
@@ -445,7 +450,7 @@ export const northBugs: Bug[] = [
         name: 'Mantis',
         picture: '../../assets/img/bugs/mantis.png',
         available_month: [MONTH.March, MONTH.April, MONTH.May, MONTH.June, MONTH.July, MONTH.August,
-        MONTH.September, MONTH.October, MONTH.November, MONTH.December],
+        MONTH.September, MONTH.October, MONTH.November],
         caught: false,
         in_museum: false,
         price: 430,
@@ -512,7 +517,8 @@ export const northBugs: Bug[] = [
             hours: 17,
             minutes: 0
         },
-        notes: 'Only on white flowers'
+        preview_notes: 'White flowers',
+        notes: 'The Orchid Mantis will only perch on white flowers.'
     },
     {
         name: 'Diving Beetle',
@@ -659,7 +665,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 800,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 0,
             minutes: 0
@@ -667,8 +673,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 24,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Dung Beetle',
@@ -686,7 +691,7 @@ export const northBugs: Bug[] = [
             hours: 24,
             minutes: 0
         },
-        notes: 'Rolling snowballs'
+        notes: 'With no dung to roll on this getaway island. The Dung Beetle has adapted and started to roll snowballs.'
     },
     {
         name: 'Earth-Boring Dung Beetle',
@@ -746,7 +751,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 8000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -754,8 +759,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On cocnut trees'
+        }
     },
     {
         name: 'Saw Stag',
@@ -832,7 +836,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 8000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -840,8 +844,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Golden Stag',
@@ -850,7 +853,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 12000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -858,8 +861,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Giraffe Stag',
@@ -868,7 +870,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 12000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -876,8 +878,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Horned Dynastid',
@@ -903,7 +904,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 8000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -911,8 +912,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Horned Elephant',
@@ -921,7 +921,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 8000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -929,8 +929,7 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Horned Hercules',
@@ -939,7 +938,7 @@ export const northBugs: Bug[] = [
         caught: false,
         in_museum: false,
         price: 12000,
-        location: BUG_LOCATION.Trees,
+        location: BUG_LOCATION.Coco_Tree,
         time_start: {
             hours: 17,
             minutes: 0
@@ -947,13 +946,12 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 8,
             minutes: 0
-        },
-        notes: 'On coconut trees'
+        }
     },
     {
         name: 'Walking Stick - Morning',
         picture: '../../assets/img/bugs/walkingstick.png',
-        available_month: [MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
+        available_month: [MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November],
         caught: false,
         in_museum: false,
         price: 600,
@@ -970,7 +968,7 @@ export const northBugs: Bug[] = [
     {
         name: 'Walking Stick - Night',
         picture: '../../assets/img/bugs/walkingstick.png',
-        available_month: [MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
+        available_month: [MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November],
         caught: false,
         in_museum: false,
         price: 600,
@@ -1000,7 +998,8 @@ export const northBugs: Bug[] = [
             hours: 24,
             minutes: 0
         },
-        notes: 'Disguised as leaves'
+        preview_notes: 'Disguised as leaves',
+        notes: 'The Walking Leaf is a master of disguise. It will be under the trees diguising itself as a leaf.'
     },
     {
         name: 'Bagworm',
@@ -1019,7 +1018,8 @@ export const northBugs: Bug[] = [
             hours: 24,
             minutes: 0
         },
-        notes: 'Shake trees'
+        preview_notes: 'Shake trees',
+        notes: 'When shaking trees, the Bagworm can descend on its silk for a short amount of time before returning into the leaves of the tree.'
     },
     {
         name: 'Ant',
@@ -1175,7 +1175,8 @@ export const northBugs: Bug[] = [
             hours: 24,
             minutes: 0
         },
-        notes: 'Shake trees. Will sting'
+        preview_notes: 'Shake trees. Aggressive',
+        notes: 'When shaking trees, you can dislodge a Wasp Nest. The wasps will swarm you and sting, causing you to pass out. The nest can be collected to craft medicine.'
     },
     {
         name: 'Brown Cicada',
@@ -1231,7 +1232,7 @@ export const northBugs: Bug[] = [
     {
         name: 'Walker Cicada',
         picture: '../../assets/img/bugs/walkercicada.png',
-        available_month: [MONTH.July, MONTH.August],
+        available_month: [MONTH.August, MONTH.September],
         caught: false,
         in_museum: false,
         price: 400,
@@ -1268,7 +1269,7 @@ export const northBugs: Bug[] = [
         available_month: [MONTH.July, MONTH.August],
         caught: false,
         in_museum: false,
-        price: 500,
+        price: 550,
         location: BUG_LOCATION.Trees,
         time_start: {
             hours: 16,
@@ -1312,7 +1313,8 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 24,
             minutes: 0
-        }
+        },
+        notes: 'The Mole Cricket can be found by digging where you hear the Mole Cricket chirping the loudest. The Mole Cricket will attempt to scurry away, so have your net ready.'
     },
     {
         name: 'Pondskater',
@@ -1365,7 +1367,8 @@ export const northBugs: Bug[] = [
         time_end: {
             hours: 24,
             minutes: 0
-        }
+        },
+        notes: 'The flea can be found on villager\'s heads.'
     },
     {
         name: 'Snail',
@@ -1384,13 +1387,14 @@ export const northBugs: Bug[] = [
             hours: 24,
             minutes: 0
         },
-        notes: 'Raining'
+        preview_notes: 'Raining',
+        notes: 'The Snail will only come out in the rain.'
     },
     {
         name: 'Spider',
         picture: '../../assets/img/bugs/spider.png',
         available_month: [MONTH.January, MONTH.February, MONTH.March, MONTH.April, MONTH.May, MONTH.June,
-        MONTH.July, MONTH.August, MONTH.September, MONTH.November, MONTH.October, MONTH.December],
+        MONTH.July, MONTH.August, MONTH.September, MONTH.October, MONTH.November, MONTH.December],
         caught: false,
         in_museum: false,
         price: 600,
@@ -1403,7 +1407,8 @@ export const northBugs: Bug[] = [
             hours: 8,
             minutes: 0
         },
-        notes: 'Shake trees'
+        preview_notes: 'Shake trees',
+        notes: 'When shaking trees, the Spider can descend on its silk for a short amount of time before returning into the leaves of the tree.'
     },
     {
         name: 'Tarantula',
@@ -1421,7 +1426,8 @@ export const northBugs: Bug[] = [
             hours: 4,
             minutes: 0
         },
-        notes: 'Will attack'
+        preview_notes: 'Aggressive',
+        notes: 'The Tarantula is aggressive. It will chase you. If the Tarantula attacks you, it will knock you out.'
     },
     {
         name: 'Scorpion',
@@ -1439,6 +1445,7 @@ export const northBugs: Bug[] = [
             hours: 4,
             minutes: 0
         },
-        notes: 'Will attack'
+        preview_notes: 'Aggressive',
+        notes: 'The Scorpion is aggressive. It will chase you. If the Scorpion stings you, it will knock you out.'
     },
 ];
