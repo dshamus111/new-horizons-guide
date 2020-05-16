@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="sort-name">
+    <label id="name-label">Sort By:</label>
+    <br>
+    <mat-radio-group
+      aria-labelledby="name-label"
+      [(ngModel)]="data.sortData.sortName"
+      class="radio-group"
+      >
+      <mat-radio-button [value]="'name'">
+        Name
+      </mat-radio-button>
+      <mat-radio-button [value]="'price'">
+        Price
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="sort-order">
+    <label id="order-label">Sort Order:</label>
+    <br>
+    <ng-container [ngSwitch]="data.sortData.sortName">
+      <mat-radio-group
+        aria-labelledby="order-label"
+        [(ngModel)]="data.sortData.sortOrder"
+        class="radio-group"
+        *ngSwitchCase="'name'">
+        <mat-radio-button [value]="'asc'">
+          A to Z
+        </mat-radio-button>
+        <mat-radio-button [value]="'desc'">
+          Z to A
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <mat-radio-group
+        aria-labelledby="order-label"
+        [(ngModel)]="data.sortData.sortOrder"
+        class="radio-group"
+        *ngSwitchCase="'price'">
+        <mat-radio-button [value]="'asc'">
+          Low to High
+        </mat-radio-button>
+        <mat-radio-button [value]="'desc'">
+          High to Low
+        </mat-radio-button>
+      </mat-radio-group>
+    </ng-container>
+  </div>
+</div>

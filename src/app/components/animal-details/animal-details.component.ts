@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Time } from '@angular/common';
-import { Fish, Bug, MONTH } from 'src/app/models/Animal.model';
+import { Fish, Bug, MONTH, SHADOW } from 'src/app/models/Animal.model';
 
 @Component({
   selector: 'app-animal-details',
@@ -34,9 +34,16 @@ export class AnimalDetailsComponent implements OnInit {
 
   isAvailable(month: MONTH) {
     if (this.data.available_month.indexOf(month) > -1) {
-      return (this.data as Fish).shadow ? 'lightskyblue' : 'lightgreen';
+      return (this.data as Fish).shadow !== undefined ? 'lightskyblue' : 'lightgreen';
     }
-
     return 'white';
+  }
+
+  isFish(): boolean {
+    return (this.data as Fish).shadow !== undefined;
+  }
+
+  getShadow(): SHADOW {
+    return (this.data as Fish).shadow;
   }
 }

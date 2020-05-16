@@ -1,0 +1,21 @@
+.container {
+  height: 100px;
+  width: 200px;
+  display: flex;
+}
+
+.sort-name, .sort-order {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group > * {
+  margin: 5px 0px;
+}

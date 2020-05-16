@@ -23,15 +23,15 @@ export interface Animal extends Collectable {
 }
 
 export enum SHADOW {
-  Tiny, // 1
-  Small, // 2
-  Medium, // 3
-  Large, // 4
-  XLarge, // 5
-  Gigantic, // 6
-  Gigantic_Finned,
-  Large_Finned,
-  Narrow
+  Tiny = 'Tiny', // 1
+  Small = 'Small', // 2
+  Medium = 'Medium', // 3
+  Large = 'Large', // 4
+  XLarge = 'Extra Large', // 5
+  Gigantic = 'Gigantic', // 6
+  Gigantic_Finned = 'Gigantic Finned',
+  Large_Finned = 'Large Finned',
+  Narrow = 'Narrow'
 }
 
 export enum FISH_LOCATION {

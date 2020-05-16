@@ -1,22 +1,22 @@
 <div class="container">
   <div class="container__top">
     <h1>GIANT PICTURE</h1>
-    <h3>{{data.name}}</h3>
+    <h2>{{data.name}}</h2>
     <div class="info-row">
-      <p>{{data.location}}</p>
+      <h3>{{data.location}}</h3>
       <mat-divider [vertical]="true"></mat-divider>
-      <p>{{data.time_start.hours === 0 && data.time_end.hours === 24 ? 'All Day' : formatTime(data.time_start) + ' - ' + formatTime(data.time_end)}}</p>
+      <h3>{{data.time_start.hours === 0 && data.time_end.hours === 24 ? 'All Day' : formatTime(data.time_start) + ' - ' + formatTime(data.time_end)}}</h3>
       <mat-divider [vertical]="true"></mat-divider>
-      <p><img src="../../../assets/img/BellCoin.png" height="10px" width="10px">{{data.price}}</p>
+      <h3><img src="../../../assets/img/BellCoin.png" height="10px" width="10px">{{data.price}}</h3>
     </div>
   </div>
 
   <div class="container__middle">
     <div class="left-half">
-      <h2>Shadow</h2>
+      <h2 *ngIf="isFish()" style="text-align: center;">Shadow: <br> {{getShadow()}}</h2>
       <div class="icons">
-        <p>Caught</p>
-        <p>Museum</p>
+        <div class="caught">&nbsp;</div>
+        <div class="museum">&nbsp;</div>
       </div>
     </div>
     <div class="available">
@@ -39,7 +39,7 @@
 
   <div class="container__bottom">
     <h2>Notes:</h2>
-    <p>{{data.notes}}</p>
+    <h3>{{data.notes}}</h3>
   </div>
 
   <button mat-button (click)="close()">Close</button>

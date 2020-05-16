@@ -5,6 +5,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 
+  font-family: Daniel;
+
   &__top{
     display: flex;
     flex-direction: column;
@@ -37,7 +39,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
 
       .icons {
         width: 100%;
@@ -75,4 +77,11 @@
   // &__bottom {
   //   padding: 10px;
   // }
+}
+
+.caught, .museum {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: thin solid black;
 }
