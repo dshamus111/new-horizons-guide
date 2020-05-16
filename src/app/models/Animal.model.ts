@@ -57,6 +57,7 @@ export enum BUG_LOCATION {
   Rot_Food = 'Rotting Food',
   Stumps = 'Stumps',
   Trees = 'Trees',
+  Coco_Tree = 'Coconut Trees',
   Underground = 'Underground',
   Villager = 'Villager Heads',
   Trash = 'Trash'

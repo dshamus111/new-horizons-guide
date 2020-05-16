@@ -1507,7 +1507,7 @@ export const northFish: Fish[] = [
         minutes: 0
       },
       preview_notes: 'Raining',
-      notes: 'Only available when raining.'
+      notes: 'The Coelacanth will only be out swimming in the rain.'
     },
 
 ];

@@ -7,4 +7,5 @@ export interface Collectable {
   price: number;
   preview_notes?: string;
   notes?: string;
+  b_fact?: string;
 }
