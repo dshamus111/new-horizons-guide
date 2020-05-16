@@ -3,8 +3,8 @@
     <div class="picture">
       <img src="{{fish.picture}}">
       <div class="badges">
-        <div class="badge badge-caught" [ngStyle]="{'visibility': fish.caught ? 'visible' : 'hidden'}">&nbsp;</div>
-        <div class="badge badge-museum" [ngStyle]="{'visibility': fish.in_museum ? 'visible' : 'hidden'}">&nbsp;</div>
+        <div class="badge badge-caught" [ngStyle]="{'visibility': fish.caught ? 'visible' : 'hidden'}">C</div>
+        <div class="badge badge-museum" [ngStyle]="{'visibility': fish.in_museum ? 'visible' : 'hidden'}">M</div>
       </div>
     </div>
     <div class="name"><p>{{fish.name}}</p></div>
