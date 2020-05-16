@@ -8,6 +8,13 @@ import { SwUpdate } from '@angular/service-worker';
 import { DataHandlerService } from './services/data-handler.service';
 import { Observable, of, BehaviorSubject, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { SortDialogComponent } from './components/sort-dialog/sort-dialog.component';
+import { MatDialog } from '@angular/material';
+
+export interface SortData {
+  sortName: string; // name, location (if animal), price,
+  sortOrder: string; // asc, desc
+}
 
 @Component({
   selector: 'app-root',
@@ -23,13 +30,35 @@ export class AppComponent implements OnInit {
   selectedTab: number;
   filter: boolean;
 
+  activeTab = 0;
+
+  // Seperate sort data for each tab
+  tabSortData: SortData[] = [
+    {
+      sortName: 'price',
+      sortOrder: 'asc'
+    },
+    {
+      sortName: 'name',
+      sortOrder: 'desc'
+    },
+    {
+      sortName: 'name',
+      sortOrder: 'asc'
+    },
+    {
+      sortName: 'name',
+      sortOrder: 'asc'
+    }
+  ];
+
   update = false;
 
   isLoading: BehaviorSubject<boolean>;
   loadingData: Subscription;
   loadingText: string;
 
-  constructor(private updates: SwUpdate, private db: DataHandlerService) {
+  constructor(private updates: SwUpdate, private db: DataHandlerService, public dialog: MatDialog) {
     if (!this.updates.isEnabled) {
       console.log('Updates are NOT enabled');
     }
@@ -78,6 +107,7 @@ export class AppComponent implements OnInit {
 
   toggleTheme(event) {
     this.selectedTab = event.index;
+    this.activeTab = event.index;
   }
 
   displayTheme() {
@@ -90,6 +120,23 @@ export class AppComponent implements OnInit {
         return 'tan';
       case(3):
         return 'lightcoral';
+    }
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(SortDialogComponent, {
+      data: {
+        activeTab: this.activeTab,
+        sortData: this.tabSortData[this.activeTab]
+      },
+    });
+  }
+
+  changeTab(event) {
+    if (event === 'swiperight' && this.activeTab > 0) {
+      this.activeTab--;
+    } else if (event === 'swipeleft' && this.activeTab < 2) {
+      this.activeTab++;
     }
   }
 

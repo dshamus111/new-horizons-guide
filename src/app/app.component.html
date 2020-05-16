@@ -1,27 +1,28 @@
-<div class="main-container" *ngIf="(isLoading | async) === false else loading">
+<div class="main-container" *ngIf="(isLoading | async) === false else loading" (swipeleft)="changeTab($event.type)" (swiperight)="changeTab($event.type)">
 
   <header class="header-bar" [ngStyle]="{'background-color': displayTheme()}">
+    <button mat-button (click)="openDialog()"><mat-icon>sort</mat-icon></button>
     <button *ngIf="update === true" mat-icon-button (click)="updateApplication()" matTooltip="An update is available!"><mat-icon>system_update</mat-icon></button>
-    <button mat-icon-button [mat-menu-trigger-for]="settingsMenu" class="settings"><mat-icon>settings</mat-icon></button>
+    <button mat-icon-button [mat-menu-trigger-for]="settingsMenu" class="settings"><mat-icon>more_horiz</mat-icon></button>
   </header>
 
-  <mat-tab-group mat-stretch-tabs headerPosition="below" class="list" (selectedTabChange)="toggleTheme($event)">
+  <mat-tab-group #tabgroup mat-stretch-tabs headerPosition="below" class="list" [selectedIndex]="activeTab" (selectedTabChange)="toggleTheme($event)">
 
     <mat-tab label="Fish">
-      <app-fish-item *ngFor="let fish of fishList | available_date: filter" [fish]="fish"></app-fish-item>
+      <app-fish-item *ngFor="let fish of fishList | available_date: filter | sort: tabSortData[0].sortName : tabSortData[0].sortOrder" [fish]="fish"></app-fish-item>
     </mat-tab>
 
     <mat-tab label="Bugs">
-      <app-bug-item *ngFor="let bug of bugList | available_date: filter" [bug]="bug"></app-bug-item>
+      <app-bug-item *ngFor="let bug of bugList | available_date: filter | sort: tabSortData[1].sortName : tabSortData[1].sortOrder" [bug]="bug"></app-bug-item>
     </mat-tab>
 
-    <mat-tab label="Fossils">
+    <!-- <mat-tab label="Fossils">
       <div class="soon"><p>Coming Soon</p></div>
     </mat-tab>
 
     <mat-tab label="Artwork">
       <div class="soon"><p>Coming Soon</p></div>
-    </mat-tab>
+    </mat-tab> -->
 
   </mat-tab-group>
 
