@@ -3,7 +3,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  // grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+  grid-template-rows: auto 180px 1fr;
 
   font-family: Daniel;
 
@@ -23,7 +24,11 @@
 
     .info-row > * {
       margin: 0 10px;
-      
+
+    }
+
+    h2 {
+      margin: 5px;
     }
 
   }
@@ -82,11 +87,21 @@
   // }
 }
 
-.caught, .museum {
+.not-caught, .museum {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: thin solid black;
+}
+
+.fish-caught {
+  background-color: skyblue;
+  border-radius: 50%;
+}
+
+.bug-caught {
+  background-color: lightgreen;
+  border-radius: 50%;
 }
 
 .picture-real {
@@ -94,10 +109,16 @@
   object-fit: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100px;
-  width: 200px;
+  height: 200px;
+  width: 300px;
 }
 
 .blathers-notes {
   font-style: italic;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
