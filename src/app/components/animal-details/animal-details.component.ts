@@ -51,8 +51,7 @@ export class AnimalDetailsComponent implements OnInit {
     if (this.isFish()) {
       return 'url(../../../assets/img/fish_real/' + this.data.name.toLowerCase().replace(/\s/g, '').replace('-', '') + '.png)';
     } else {
-      console.log('../../../assets/img/bugs_real/' + this.data.name.toLowerCase().replace(/\s/g, '').replace('-', '') + '.png');
-      return 'url(../../../assets/img/bugs_real/' + this.data.name.toLowerCase().replace(/\s/g, '').replace('-', '') + '.png)';
+      return 'url(../../../assets/img/bugs_real/' + this.data.name.toLowerCase().replace(/\s/g, '').replace('-', '').replace('\'', '') + '.png)';
     }
   }
 }

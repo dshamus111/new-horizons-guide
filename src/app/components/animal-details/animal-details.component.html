@@ -18,7 +18,7 @@
       <div class="icons">
         <div *ngIf="data.caught else not_caught">
           <img *ngIf="isFish() else bug" src="../../../assets/img/fish_caught.png" height="50px" width="50px" class="fish-caught">
-          <ng-template #bug><div class="not-caught">&nbsp;</div></ng-template>
+          <ng-template #bug><img src="../../../assets/img/bug_caught.png" height="50px" width="50px" class="bug-caught"></ng-template>
         </div>
         <ng-template #not_caught><div class="not-caught">&nbsp;</div></ng-template>
         <div class="museum">&nbsp;</div>
