@@ -4,7 +4,7 @@
       <img src="{{fish.picture}}">
       <div class="badges">
         <div class="badge badge-caught" [ngStyle]="{'visibility': fish.caught ? 'visible' : 'hidden'}"><img src="../../../assets/img/fish_caught.png" height="20px" width="20px"></div>
-        <div class="badge badge-museum" [ngStyle]="{'visibility': fish.in_museum ? 'visible' : 'hidden'}">M</div>
+        <div class="badge badge-museum" [ngStyle]="{'visibility': fish.in_museum ? 'visible' : 'hidden'}"><img src="../../../assets/img/museum.png" height="20px" width="20px"></div>
       </div>
     </div>
     <div class="name"><p>{{fish.name}}</p></div>
@@ -15,7 +15,7 @@
   <mat-drawer #options mode="push" class="drawer" position="end" mode="side">
     <div class="drawer-container">
       <button mat-icon-button class="caught" (click)="toggleCaught()"><img src="../../../assets/img/fish_caught.png" height="30px" width="30px" class="badge-caught"></button>
-      <button mat-icon-button class="museum" (click)="toggleMuseum()"><mat-icon>museum</mat-icon></button>
+      <button mat-icon-button class="museum" (click)="toggleMuseum()"><img src="../../../assets/img/museum.png" height="30px" width="30px" class="badge-museum"></button>
       <button mat-icon-button class="details" (click)="openDialog(fish)"><mat-icon>info</mat-icon></button>
     </div>
   </mat-drawer>
