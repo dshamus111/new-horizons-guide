@@ -18,6 +18,7 @@ export enum MONTH {
 
 export interface Animal extends Collectable {
   available_month: MONTH[];
+  available_south: MONTH[];
   time_start: Time;
   time_end: Time;
 }
@@ -57,7 +58,7 @@ export enum BUG_LOCATION {
   Rot_Food = 'Rotting Food',
   Stumps = 'Stumps',
   Trees = 'Trees',
-  Coco_Tree = 'Coconut Trees',
+  Coco_Tree = 'Palm Trees',
   Underground = 'Underground',
   Villager = 'Villager Heads',
   Trash = 'Trash'

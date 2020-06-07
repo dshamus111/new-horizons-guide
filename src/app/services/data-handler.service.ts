@@ -5,8 +5,8 @@ import { openDB } from 'idb';
 import { Fish, Bug} from '../models/Animal.model';
 
 
-import { northFish } from '../models/north-hemi-fish-default';
-import { northBugs } from '../models/north-hemi-bugs-default';
+import { northFish } from '../models/fish-default';
+import { northBugs } from '../models/bugs-default';
 import { ThrowStmt } from '@angular/compiler';
 
 @Injectable({

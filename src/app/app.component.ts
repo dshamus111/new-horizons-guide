@@ -1,7 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 
-import { northFish } from './models/north-hemi-fish-default';
-import { northBugs } from './models/north-hemi-bugs-default';
+import { northFish } from './models/fish-default';
+import { northBugs } from './models/bugs-default';
 import { Fish, Bug } from './models/Animal.model';
 import { Collectable } from './models/Collectable.model';
 import { SwUpdate } from '@angular/service-worker';
